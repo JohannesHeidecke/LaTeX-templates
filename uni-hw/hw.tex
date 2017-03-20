@@ -7,6 +7,7 @@
 \usepackage[small]{titlesec}
 \usepackage{graphicx}
 \usepackage{subcaption}
+\usepackage{natbib}
 \setlength{\parskip}{10pt plus 1pt minus 1pt}
 \begin{document}
 \maketitle
@@ -38,7 +39,12 @@ Look at subfigure \ref{fig:sfig2} to see an example.
 \label{fig:fig2}
 \end{figure}
 
+This is a citation: \cite{breiman2001random}.
+
 
 \[ equation \cdot a \rightarrow \]
+
+\bibliographystyle{alpha}
+\bibliography{ref/references.bib}
 
 \end{document}
