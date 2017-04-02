@@ -8,6 +8,7 @@
 \usepackage{graphicx}
 \usepackage{subcaption}
 \usepackage{natbib}
+\usepackage{listings}  % for code snippets
 \setlength{\parskip}{10pt plus 1pt minus 1pt}
 \begin{document}
 \maketitle
@@ -33,16 +34,28 @@ Look at subfigure \ref{fig:sfig2} to see an example.
 \label{fig:fig}
 \end{figure}
 
-\begin{figure}[htb]
-\includegraphics[width=.8\linewidth]{img/dummy}	
-\caption{1a}
-\label{fig:fig2}
-\end{figure}
 
 This is a citation: \cite{breiman2001random}.
 
 
 \[ equation \cdot a \rightarrow \]
+
+% https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings
+\lstset{language=Pascal}
+\begin{lstlisting}[frame=single]  % Start your code-block
+for i:=maxint to 0 do
+begin
+{ do nothing }
+end;
+Write('Case insensitive ');
+Write('Pascal keywords.');
+\end{lstlisting}
+
+\begin{figure}[htb]
+\includegraphics[width=.8\linewidth]{img/dummy}	
+\caption{1a}
+\label{fig:fig2}
+\end{figure}
 
 \bibliographystyle{alpha}
 \bibliography{ref/references.bib}
